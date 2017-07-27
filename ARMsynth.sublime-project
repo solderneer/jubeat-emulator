@@ -1,0 +1,27 @@
+{
+    "build_systems":
+    [
+        {
+            "cmd": ["make"],
+            "name": "ARM build",
+            "working_dir": "${project_path}",
+            "file_regex": "^(.*):(\\d+):(\\d+):\\s*(.*)$"
+        }
+    ],
+    "folders":
+    [
+        {
+            "follow_symlinks": true,
+            "path": "."
+        }
+    ],
+
+    "settings":
+    {
+        "sublimegdb_workingdir": "${project_path:out/hex/}",
+        "sublimegdb_commandline": "arm-none-eabi-gdb --interpreter=mi *.elf",
+        "ecc_c_flags" : ["-I/Users/solderneer/Documents/Projects/ARMSynth/firmware/ARMSynth/Inc",
+                         "-I/Users/solderneer/Documents/Projects/ARMSynth/firmware/ARMSynth/Drivers/CMSIS/Include",
+                         "-I/Users/solderneer/Documents/Projects/ARMSynth/firmware/ARMsynth/Drivers/STM32F4xx_HAL_Driver/Inc"]
+    }
+}
