@@ -1,2 +1,2 @@
-# ARMSynth
-A 8x8 grid launchpad style synthesiser based on the STM32F4
+# jubeat-emulator
+An arcade emulation of the jubeat game. Custom designed hardware and open sourced
