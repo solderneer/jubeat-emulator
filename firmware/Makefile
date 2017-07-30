@@ -1,4 +1,3 @@
--
 CC      :=$(CROSS)gcc
 CXX     :=$(CROSS)g++
 LD      :=$(CROSS)g++

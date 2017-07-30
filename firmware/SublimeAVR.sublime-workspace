@@ -1,1 +1,385 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"switch",
+				"switchBuffer"
+			],
+			[
+				"Swi",
+				"Switches_Scan\tvoid Switches_Scan(uint16_t *buffer)"
+			],
+			[
+				"rece",
+				"received_data\tuint8_t received_data"
+			],
+			[
+				"IO_",
+				"IO_SetDir\tvoid IO_SetDir(volatile uint8_t *DDRx, uint8_t PINx, Otype_t outputType)"
+			],
+			[
+				"IO",
+				"IO_Toggle\tvoid IO_Toggle(volatile uint8_t *PORTx, uint8_t PINx)"
+			],
+			[
+				"delay",
+				"_delay_ms\tvoid _delay_ms(double __ms)"
+			],
+			[
+				"IO_Init",
+				"IO_InitStructure\tIO_InitStruct IO_InitStructure"
+			],
+			[
+				"twi",
+				"TWIE\tTWIE"
+			],
+			[
+				"Shift",
+				"Shift_Set\tvoid Shift_Set(port_t portx, uint8_t pinx)"
+			],
+			[
+				"sHIFT",
+				"ShiftOut\tvoid ShiftOut()"
+			],
+			[
+				"uint8_t",
+				"uint8_t\tuint8_t"
+			],
+			[
+				"IO_Ini",
+				"IO_InitStructure\tIO_InitStruct IO_InitStructure"
+			],
+			[
+				"PO",
+				"PORTB0\tPORTB0"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.c",
+			"settings":
+			{
+				"buffer_size": 108,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"bui",
+				"Build With: SublimeAVR"
+			],
+			[
+				"Pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"build",
+				"Build With: SublimeAVR"
+			],
+			[
+				"pACK",
+				"Package Control: Remove Package"
+			],
+			[
+				"",
+				"Snippet: Do While Loop"
+			],
+			[
+				"avr",
+				"Build With: SublimeAVR"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Packa",
+				"Package Control: List Packages"
+			],
+			[
+				"AVR",
+				"AVR: Create/Update Project"
+			],
+			[
+				"Packag",
+				"Package Control: Install Package"
+			],
+			[
+				"Subl",
+				"SublimeGDB: Open Breakpoint View"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"ter",
+				"Terminal: Open"
+			],
+			[
+				"Sublime",
+				"SublimeLinter: Enable Linting"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"t",
+				"Terminal: Open"
+			]
+		],
+		"width": 462.0
+	},
+	"console":
+	{
+		"height": 141.0,
+		"history":
+		[
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/solderneer/Documents/Projects/jubeat-emulator/firmware"
+	],
+	"file_history":
+	[
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/74hc595.c",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/74hc595.h",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/i2c.c",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/i2c.h",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/spi.h",
+		"/usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/log4cxx.rb",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/SublimeAVR.sublime-project",
+		"/usr/local/CrossPack-AVR-20131216/avr/include/avr/iom328p.h",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/io.h",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/Makefile",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/settings.h",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/io.c",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/switches.c",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/switches.h",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/light.c",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/lights.h",
+		"/usr/local/CrossPack-AVR-20131216/avr/include/avr/portpins.h",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/spi.c",
+		"/Users/solderneer/Desktop/try1.c",
+		"/Users/solderneer/Documents/Projects/KerbalKontrol/code/io-board/main.c",
+		"/usr/local/CrossPack-AVR-20131216/avr/include/avr/interrupt.h",
+		"/Users/solderneer/Projects/test-avr/main.c",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/AVR/SublimeAVR.sublime-settings",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/Src/can.c",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/Src/main.c",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/User/SublimeAVR.sublime-settings",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/LLC_test.sublime-project",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Inc/interface.h",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Src/interface.c",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Src/main.c",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Src/can.c",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Inc/can.h",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Inc/motor.h",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Src/motor.c",
+		"/Users/solderneer/Desktop/Hope Technik/agv_motion_controller/src/control.c",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Inc/main.h",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Inc/ringbuffer.h",
+		"/Users/solderneer/Projects/Low_Level_Controller_Testing/Src/main.c",
+		"/Users/solderneer/Projects/test/Src/main.c",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/User/SublimeGDB.sublime-settings",
+		"/Users/solderneer/Projects/test/stm32-test.sublime-project",
+		"/Users/solderneer/Projects/test/Makefile",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/User/Terminal.sublime-settings",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/solderneer/.path",
+		"/Users/solderneer/.vimrc"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"build",
+			"Pullup",
+			"MODE",
+			"vTaskDelay"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"HAL_Delay"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.c",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 108,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/C++/C.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "SublimeAVR.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/Projects/solderneer.github.io/homepage.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
