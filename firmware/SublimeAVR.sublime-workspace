@@ -60,11 +60,23 @@
 	"buffers":
 	[
 		{
-			"file": "main.c",
+			"file": "Makefile",
 			"settings":
 			{
-				"buffer_size": 108,
+				"buffer_size": 1623,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nEasyClangComplete\n-----------------\n\n  Version 4.1.0\n  =============\n  \n  Fixes and improvements:\n  -------------\n  - removed a couple of threads related memoty leaks\n  - change debug and info logging style\n  - disambiguate between apple clang and general clang (@rwols)\n  - allow using all variables of sublime's window in settings (@rwols)\n  - fix disappearing param tag in Doxygen comments (@papadokolos)\n  \n  Thansk!\n  -------\n  Huge thanks go to the contributors: @rwols and @papadokolos\n  \n  I need your support!\n  --------------------\n  💜 this plugin? Please consider buying me a 🍵\n  https://github.com/niosus/EasyClangComplete#support-it\n",
+			"settings":
+			{
+				"buffer_size": 697,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
 			}
 		}
 	],
@@ -261,30 +273,60 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "main.c",
-					"semi_transient": true,
+					"file": "Makefile",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 108,
+						"buffer_size": 1623,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								855,
+								855
 							]
 						],
 						"settings":
 						{
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/C++/C.sublime-syntax"
+							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 697,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								697,
+								697
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
