@@ -101,7 +101,15 @@ int main(void)
   while (1)
   {
   /* USER CODE END WHILE */
-
+    if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
+    {
+        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+        HAL_Delay(100);
+    }
+    else
+    {
+        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+    }
   /* USER CODE BEGIN 3 */
 
   }
