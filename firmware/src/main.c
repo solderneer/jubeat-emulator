@@ -39,6 +39,9 @@
 #include "main.h"
 #include "stm32f4xx_hal.h"
 
+#include "uart.h"
+#include "gpio.h"
+
 void SystemClock_Config(void);
 
 int main(void)
@@ -47,8 +50,8 @@ int main(void)
     HAL_Init();
     SystemClock_Config();
 
-    MX_GPIO_Init();
-    MX_USART1_UART_Init();
+    GPIO_Init();
+    USART1_Init();
 
     while (1)
     {
