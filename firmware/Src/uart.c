@@ -3,7 +3,7 @@
 
 UART_HandleTypeDef huart1;
 
-void MX_USART1_UART_Init(void)
+void USART1_Init(void)
 {
 
   huart1.Instance = USART1;
