@@ -1,7 +1,7 @@
 #include "stm32f4xx_hal.h"
 #include "uart.h"
 
-UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart1;
 
 void USART1_Init(void)
 {

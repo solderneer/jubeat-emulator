@@ -66,7 +66,9 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c \
-Src/stm32f4xx_hal_msp.c  
+Src/stm32f4xx_hal_msp.c \
+Src/uart.c \
+Src/gpio.c
 
 # ASM sources
 ASM_SOURCES =  \
