@@ -60,5 +60,24 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(ROW4_GPIO_Port, &GPIO_InitStruct);
-
 }
+
+// TODO: Cannot implement any wrappers because GPIO_TypeDef* and stuff is not exposed?
+/*
+// Just basic wrappers for the GPIO utilities for consistent implementation
+GPIO_PinState MX_GPIO_Read(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+{
+  GPIO_PinState currentState = 0;
+  currentState = HAL_GPIO_ReadPin(GPIOx, GPIO_Pin);
+  return currentState;
+}
+
+void MX_GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState)
+{
+  HAL_GPIO_WritePin(GPIOx, GPIO_Pin, PinState);
+}
+
+void MX_GPIO_Toggle(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+{
+  HAL_GPIO_TogglePin(GPIOx, GPIO_Pin);
+}*/
