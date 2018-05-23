@@ -41,8 +41,6 @@
 #define __MAIN_H
 
 /* Includes ------------------------------------------------------------------*/
-#include "uart.h"
-#include "matrix_scan.h"
 
 /* Error Handler */
 void _Error_Handler(char *, int);

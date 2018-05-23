@@ -2,8 +2,6 @@
 #define __MATRIX_SCAN_H
 
 /* Includes */
-#include "stm32f4xx_hal.h"
-#include "bsp.h"
 #include "stdint.h"
 
 /* Public function prototypes */

@@ -1,5 +1,8 @@
 /* Includes */
 #include "matrix_scan.h"
+#include "stm32f4xx_hal.h"
+#include "bsp.h"
+#include "stdint.h"
 
 /* Function Definitions */
 void Matrix_Init(void)

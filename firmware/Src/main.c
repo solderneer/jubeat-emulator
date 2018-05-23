@@ -38,6 +38,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "uart.h"
+#include "matrix_scan.h"
 #include "bsp.h"
 #include "stm32f4xx_hal.h"
 
@@ -53,15 +55,12 @@ int main(void)
   SystemClock_Config();
 
   /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_USART1_UART_Init();
+  UART_HandleTypeDef* huart1 = MX_USART1_UART_Init();
 
-  uint32_t i = 0;
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
   while(1) {
-    HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-    for(i = 0;i != 5000000;i++) {}
-    //HAL_Delay(500);
+    //HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+    UART_TransmitByte(huart1, (uint8_t)(0xFE));
+    HAL_Delay(500);
   }
 }
 

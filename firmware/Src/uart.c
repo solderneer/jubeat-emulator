@@ -1,17 +1,18 @@
 /* Includes ------------------------------------------------------------------*/
 #include "uart.h"
 #include "stm32f4xx_hal.h"
+#include "stdint.h"
 #include "bsp.h"
 
 /* Private Variables */
 UART_HandleTypeDef huart1;
 
 /* USART1 init function */
-void MX_USART1_UART_Init(void)
+UART_HandleTypeDef* MX_USART1_UART_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct;
 
-  _HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
 
   GPIO_InitStruct.Pin = USART_TX_Pin|USART_RX_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -32,6 +33,37 @@ void MX_USART1_UART_Init(void)
   {
     _Error_Handler(__FILE__, __LINE__);
   }
+
+  return &huart1; // Passing pointer to UART Handler
+}
+
+// Blocking UART TODO: Implement non-blocking but i really don't see a point
+UART_TransmitResult UART_TransmitByte(UART_HandleTypeDef* huart, uint8_t transmitByte)
+{
+  if(__HAL_UART_GET_FLAG(huart, UART_FLAG_TXE)) { // Check for transmit buffer empty
+    //HAL_StatusTypeDef transmitStatus;
+    //transmitStatus = 
+    HAL_UART_Transmit(huart, &transmitByte, 1, (uint32_t)10000);
+    return UART_TransmitSuccess;
+  }
+  else
+    return UART_TransmitFail;
+
+  return UART_TransmitFail;
+}
+
+UART_TransmitResult UART_TransmitBytes(UART_HandleTypeDef* huart, uint8_t* transmitBytes, uint16_t noBytes)
+{
+  if(__HAL_UART_GET_FLAG(huart, UART_FLAG_TXE)) {
+    //HAL_StatusTypeDef transmitStatus;
+    //transmitStatus =
+    HAL_UART_Transmit(huart, transmitBytes, noBytes, (uint32_t)(10000 * noBytes));
+    return UART_TransmitSuccess;
+  }
+  else
+    return UART_TransmitFail;
+
+  return UART_TransmitFail;
 }
 
 
