@@ -41,7 +41,6 @@
 #define __MAIN_H
 
 /* Includes ------------------------------------------------------------------*/
-#include "gpio.h"
 #include "uart.h"
 #include "matrix_scan.h"
 
