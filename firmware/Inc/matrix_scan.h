@@ -6,6 +6,6 @@
 
 /* Public function prototypes */
 void Matrix_Init(void);
-uint16_t Matrix_Scan(void);
+uint16_t Matrix_Scan(uint8_t* results);
 
 #endif /* __MATRIX_SCAN_H */

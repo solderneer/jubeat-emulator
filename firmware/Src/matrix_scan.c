@@ -68,18 +68,23 @@ void Matrix_Scan(uint8_t* results)
 
   // Scanning column 1
   HAL_GPIO_WritePin(COL1_GPIO_Port, COL1_Pin, GPIO_PIN_SET);
-  *results |= HAL_GPIO_ReadPin(ROW1_GPIO_Port, ROW1_Pin);
-  *results |= (HAL_GPIO_ReadPin(ROW2_GPIO_Port, ROW2_Pin) << 1);
-  *results |= (HAL_GPIO_ReadPin(ROW3_GPIO_Port, ROW3_Pin) << 2);
-  *results |= (HAL_GPIO_ReadPin(ROW3_GPIO_Port, ROW3_Pin) << 3);
+  *results = Matrix_ScanCol();
+  HAL_GPIO_WritePin(COL1_GPIO_Port, COL1_Pin, GPIO_PIN_RESET);
 
   // Scanning column 2
-  HAL_GPIO_WritePin(COL1_GPIO_Port, COL1_Pin, GPIO_PIN_SET);
-  *results |= HAL_GPIO_ReadPin(ROW1_GPIO_Port, ROW1_Pin);
-  *results |= (HAL_GPIO_ReadPin(ROW2_GPIO_Port, ROW2_Pin) << 1);
-  *results |= (HAL_GPIO_ReadPin(ROW3_GPIO_Port, ROW3_Pin) << 2);
-  *results |= (HAL_GPIO_ReadPin(ROW3_GPIO_Port, ROW3_Pin) << 3);
+  HAL_GPIO_WritePin(COL2_GPIO_Port, COL2_Pin, GPIO_PIN_SET);
+  *results = (Matrix_ScanCol() << 4);
+  HAL_GPIO_WritePin(COL2_GPIO_Port, COL2_Pin, GPIO_PIN_RESET);
 
+  // Scanning column 3
+  HAL_GPIO_WritePin(COL3_GPIO_Port, COL3_Pin, GPIO_PIN_SET);
+  *(results+1) = Matrix_ScanCol();
+  HAL_GPIO_WritePin(COL3_GPIO_Port, COL3_Pin, GPIO_PIN_RESET);
+
+  // Scanning column 4
+  HAL_GPIO_WritePin(COL4_GPIO_Port, COL4_Pin, GPIO_PIN_SET);
+  *(results+1) = (Matrix_ScanCol() << 4);
+  HAL_GPIO_WritePin(COL4_GPIO_Port, COL4_Pin, GPIO_PIN_RESET);
 }
 
 /* Private helper function */
