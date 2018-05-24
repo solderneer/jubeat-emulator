@@ -4,6 +4,9 @@
 #include "bsp.h"
 #include "stdint.h"
 
+/* Private function prototypes */
+uint8_t Matrix_ScanCol(void);
+
 /* Function Definitions */
 void Matrix_Init(void)
 {
@@ -80,4 +83,14 @@ void Matrix_Scan(uint8_t* results)
 }
 
 /* Private helper function */
-void Matrix_ScanCol
+uint8_t Matrix_ScanCol(void)
+{
+  uint8_t results = 0;
+
+  results |= HAL_GPIO_ReadPin(ROW1_GPIO_Port, ROW1_Pin);
+  results |= (HAL_GPIO_ReadPin(ROW2_GPIO_Port, ROW2_Pin) << 1);
+  results |= (HAL_GPIO_ReadPin(ROW3_GPIO_Port, ROW3_Pin) << 2);
+  results |= (HAL_GPIO_ReadPin(ROW3_GPIO_Port, ROW3_Pin) << 3);
+
+  return results;
+}
