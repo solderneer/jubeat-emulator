@@ -56,7 +56,28 @@ void Matrix_Init(void)
   HAL_GPIO_Init(ROW4_GPIO_Port, &GPIO_InitStruct);
 }
 
-uint16_t Matrix_Scan(void)
+// TODO: Optimize using loops or smth
+void Matrix_Scan(uint8_t* results)
 {
-  // Insert code to scan the key matrix here
+  // Resetting array space
+  *results = 0;
+  *(results+1) = 0;
+
+  // Scanning column 1
+  HAL_GPIO_WritePin(COL1_GPIO_Port, COL1_Pin, GPIO_PIN_SET);
+  *results |= HAL_GPIO_ReadPin(ROW1_GPIO_Port, ROW1_Pin);
+  *results |= (HAL_GPIO_ReadPin(ROW2_GPIO_Port, ROW2_Pin) << 1);
+  *results |= (HAL_GPIO_ReadPin(ROW3_GPIO_Port, ROW3_Pin) << 2);
+  *results |= (HAL_GPIO_ReadPin(ROW3_GPIO_Port, ROW3_Pin) << 3);
+
+  // Scanning column 2
+  HAL_GPIO_WritePin(COL1_GPIO_Port, COL1_Pin, GPIO_PIN_SET);
+  *results |= HAL_GPIO_ReadPin(ROW1_GPIO_Port, ROW1_Pin);
+  *results |= (HAL_GPIO_ReadPin(ROW2_GPIO_Port, ROW2_Pin) << 1);
+  *results |= (HAL_GPIO_ReadPin(ROW3_GPIO_Port, ROW3_Pin) << 2);
+  *results |= (HAL_GPIO_ReadPin(ROW3_GPIO_Port, ROW3_Pin) << 3);
+
 }
+
+/* Private helper function */
+void Matrix_ScanCol
