@@ -64,6 +64,8 @@ int main(void)
     //HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 
     Matrix_Scan(scan_result);
+    // scan_result[0] = 0xFF;
+    // scan_result[1] = 0xFF;
     UART_TransmitBytes(huart1, scan_result, 2);
     HAL_Delay(500);
   }
