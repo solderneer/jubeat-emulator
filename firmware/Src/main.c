@@ -55,12 +55,16 @@ int main(void)
   SystemClock_Config();
 
   /* Initialize all configured peripherals */
+  Matrix_Init();
   UART_HandleTypeDef* huart1 = MX_USART1_UART_Init();
-  char welcome[13] = "Hello World\n\r";
+  // char welcome[13] = "Hello World\n\r";
+  uint8_t scan_result[2];
 
   while(1) {
     //HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-    UART_TransmitBytes(huart1, (uint8_t*)(welcome), 13);
+
+    Matrix_Scan(scan_result);
+    UART_TransmitBytes(huart1, scan_result, 2);
     HAL_Delay(500);
   }
 }
