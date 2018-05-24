@@ -56,10 +56,11 @@ int main(void)
 
   /* Initialize all configured peripherals */
   UART_HandleTypeDef* huart1 = MX_USART1_UART_Init();
+  char welcome[13] = "Hello World\n\r";
 
   while(1) {
     //HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-    UART_TransmitByte(huart1, (uint8_t)(0xFE));
+    UART_TransmitBytes(huart1, (uint8_t*)(welcome), 13);
     HAL_Delay(500);
   }
 }
