@@ -58,7 +58,7 @@ int main(void)
   Matrix_Init();
   UART_HandleTypeDef* huart1 = MX_USART1_UART_Init();
   // char welcome[13] = "Hello World\n\r";
-  uint8_t scan_result[2];
+  uint8_t scan_result[3];
 
   while(1) {
     //HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
@@ -66,7 +66,7 @@ int main(void)
     Matrix_Scan(scan_result);
     // scan_result[0] = 0xFF;
     // scan_result[1] = 0xFF;
-    UART_TransmitBytes(huart1, scan_result, 2);
+    UART_TransmitBytes(huart1, scan_result, 3);
     HAL_Delay(500);
   }
 }

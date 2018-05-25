@@ -85,6 +85,8 @@ void Matrix_Scan(uint8_t* results)
   HAL_GPIO_WritePin(COL4_GPIO_Port, COL4_Pin, GPIO_PIN_SET);
   *(results+1) |= (Matrix_ScanCol() << 4);
   HAL_GPIO_WritePin(COL4_GPIO_Port, COL4_Pin, GPIO_PIN_RESET);
+
+  *(results+2) = (uint8_t)('\n');
 }
 
 /* Private helper function */
