@@ -2,6 +2,7 @@
 import sys
 import pyautogui
 import serial
+import binascii
 
 def serial_data(baudrate):
     ser = serial.Serial()
@@ -29,7 +30,7 @@ def serial_data(baudrate):
 
 def main():
     for packet in serial_data(115200):
-        print packet;
+        print binascii.hexlify(packet)
 
 if __name__ == "__main__":
     main()
