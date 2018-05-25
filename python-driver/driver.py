@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 import sys
 import pyautogui
-import seriali
+import serial
 
 def serial_data(baudrate):
     ser = serial.Serial()
