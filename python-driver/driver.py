@@ -1,8 +1,14 @@
 #!/usr/bin/env python2
 import sys
+import binascii
 import pyautogui
 import serial
 import bitarray
+
+key_list = ['a','b','c','d'
+           'e','f','g','h'
+           'i','j','k','l'
+           'm','n','o','p']
 
 def serial_data(baudrate):
     ser = serial.Serial()
@@ -30,10 +36,14 @@ def serial_data(baudrate):
 
 def main():
     for packet in serial_data(115200):
-        # print binascii.hexlify(packet)
-        b_packet = bytearray(packet, 'utf-8') # Converting str to binary format
-        b_array = bitarray(b_packet)
-        print b_array
+        # convert data to a bit array
+        packet_hex = binascii.hexlify(packet[:2])
+        packet_bit = "".join(["{0:04b}".format(int(c,16)) for c in packet_hex])
+        b_array = bitarray(packet_bit)
+
+        for cnt, value in enumerate(b_array):
+            if value == True:
+                pyautogui.press(keylist[value])
 
 if __name__ == "__main__":
     main()
